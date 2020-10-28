@@ -33,6 +33,14 @@ Add the Broadlink node to node-red through the manage palette tab or command lin
 
 You can either learn commands directly from the RM unit using the node, or from the Broadlink e-control app and export them. You will need the SharedData folder exported from the app as a starting point either way.
 
+## Community How-Tos, Videos & Articles
+
+If you find good content related to this set of nodes please share it below:
+
+* Video Tutorial: Broadlink RM4 Pro: Node-RED and Home Assistant setup - https://youtu.be/1U346G3MHGM
+* Article: Broadlink RM4 Pro: Node-RED and Home Assistant setup - https://peyanski.com/broadlink-rm4-pro-with-home-assistant-and-node-red/
+
+
 ## Broadlink e-control App Method
 
 First, configure the Broadlink device through the Broadlink e-control app on your smartphone. You will need to copy some files from your device after setup.

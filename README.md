@@ -40,9 +40,8 @@ Please use the sample broadlinkDB folder as the catalog if you cannot / do not w
 
 If you find good content related to this set of nodes please share it below:
 
-* Video Tutorial: Broadlink RM4 Pro: Node-RED and Home Assistant setup - https://youtu.be/1U346G3MHGM
-* Article: Broadlink RM4 Pro: Node-RED and Home Assistant setup - https://peyanski.com/broadlink-rm4-pro-with-home-assistant-and-node-red/
-
+* Video Tutorial: Broadlink RM4 Pro: Node-RED and Home Assistant setup - <https://youtu.be/1U346G3MHGM>
+* Article: Broadlink RM4 Pro: Node-RED and Home Assistant setup - <https://peyanski.com/broadlink-rm4-pro-with-home-assistant-and-node-red/>
 
 ## Broadlink e-control App Method
 

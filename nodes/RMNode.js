@@ -124,23 +124,17 @@
 
                 switch (_config.action) {
                     case "learn":
-                        if (_config.RFSweep === undefined) { //No data passed in this field
+                        if (_config.RFSweep === undefined || _config.RFSweep.toString() == "false") { //No data passed in this field
                             _device.enterLearning();
                             node.status({fill:"green",shape:"ring",text:"Learning IR - Please press remote button"});
                             node.warn("Broadlink: IR Scan - Please tap the remote button within 30 seconds.");
                             innterval = setInterval(function () { _device.checkData(); }, 1000);
                         }
                         else {
-                            if (_config.RFSweep.toString() == "false") {
-                                _device.enterLearning();
-                                node.status({fill:"green",shape:"ring",text:"Learning IR - Please press remote button"});
-                                node.warn("Broadlink: IR Scan - Please tap the remote button within 30 seconds.");
-                                innterval = setInterval(function () { _device.checkData(); }, 1000);
-                            }
-                            else {
+                            if (_config.RFSweep.toString() == "true") {
                                 _device.enterRFSweep();
                                 node.status({fill:"green",shape:"ring",text:"Learning RF - Please long press remote button"});
-                                node.warn("Broadlink: RF Scan - Please keep long press on the remote button until scan finishes.");
+                                node.warn("Broadlink: RF Scan - Please hold down a button on the RF Remote until scan finishes.");
                                 innterval = setInterval(function () { _device.checkRFData(); }, 1000);
                             }
                         }
@@ -152,7 +146,7 @@
                             options['encoding'] = "utf8";
                             fs.readFile(conf.folder + "/jsonIrCode", options, function (err, data) {
                                 if (err) {
-                                    node.err(err);
+                                    node.error(err);
                                 } else {
                                 }
                                 // Need to validate if _config.button contains valid data
@@ -160,7 +154,7 @@
                                     var code = JSON.parse(data).filter(function (obj) { if (obj.buttonId == _config.button) { return true; } })[0].code;
                                 }
                                 catch(err) {
-                                    node.err(err);
+                                    node.error(err);
                                     node.status({fill:"red",shape:"ring",text:"Message Data Error - See Console Log"});
                                 }
                                 if (_config.repeat != undefined) code[1] = _config.repeat;

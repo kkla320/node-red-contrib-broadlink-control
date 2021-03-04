@@ -48,6 +48,7 @@
                     else if (devtype == 0x51da) return 'RM4b';
                     else if (devtype == 0x610e) return 'RM4 Mini';
                     else if (devtype == 0x648d) return 'RM4 Mini';
+                    else if (devtype == 0x653a) return 'RM4 Mini';
                     else if (devtype == 0x610f) return 'RM4c';
                     else if (devtype == 0x61a2) return 'RM4 Pro';
                     else if (devtype == 0x62bc) return 'RM4c';
